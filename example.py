@@ -19,11 +19,12 @@ query_add_user = '''
     INSERT INTO users
     (name, surname, age, email, mobile)
     VALUES (
-    "Harry"
-    , "Potter"
-    , 19
-    , "potter@gmail.com"
-    , 875496213)   
+    "Tedd"
+    , "Walkins"
+    , 32
+    , "TW@gmail.com"
+    , 84946515665998
+    )   
 '''
 
 query_add_users = '''
@@ -55,26 +56,26 @@ query_match = '''
     WHERE name LIKE "T%T%"
 '''
 
-query_clear = '''
-    TRUNCATE TABLE users
-'''
-
-
-cursor.execute(query_clear)
+# query_clear = '''
+#     TRUNCATE TABLE users
+# '''
+#
+#
+# cursor.executemany(query_add_users, data_users)
 # result = cursor.fetchmany(3)[-1]
 # result = cursor.fetchall()[2]
 # pprint(result)
 # cursor.execute(query_add_user)
 # cursor.executemany(query_add_users, data_users)
-result = cursor.fetchall()
+# result = cursor.fetchall()
 print(result)
 
 
 
 
 # For save changes
-# conn.commit()
-
+conn.commit()
+# conn.rollback()
 
 
 
